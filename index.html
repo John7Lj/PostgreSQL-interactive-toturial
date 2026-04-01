@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PostgreSQL Quest — Learn SQL Like a Game</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SPLASH SCREEN -->
+<div id="splash" class="splash">
+  <div class="splash-bg"></div>
+  <div class="splash-content">
+    <div class="splash-icon">🐘</div>
+    <h1 class="splash-title">PostgreSQL<br><span>Quest</span></h1>
+    <p class="splash-sub">Master SQL through 10 interactive levels.<br>No boring lectures — just hands-on challenges.</p>
+    <div class="splash-stats">
+      <div class="stat"><span class="stat-n">10</span><span class="stat-l">Levels</span></div>
+      <div class="stat"><span class="stat-n">50+</span><span class="stat-l">Challenges</span></div>
+      <div class="stat"><span class="stat-n">∞</span><span class="stat-l">XP to earn</span></div>
+    </div>
+    <button class="btn-start" onclick="startGame()">Start Quest →</button>
+  </div>
+</div>
+
+<!-- MAIN APP -->
+<div id="app" class="app hidden">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <div class="logo">🐘 <span>PG Quest</span></div>
+      <div class="player-card">
+        <div class="player-avatar" id="playerAvatar">🧙</div>
+        <div class="player-info">
+          <div class="player-name" id="playerName">Explorer</div>
+          <div class="player-level">Level <span id="playerLvl">1</span></div>
+        </div>
+      </div>
+      <div class="xp-bar-wrap">
+        <div class="xp-label"><span id="xpCurrent">0</span> / <span id="xpNext">100</span> XP</div>
+        <div class="xp-bar"><div class="xp-fill" id="xpFill"></div></div>
+      </div>
+    </div>
+
+    <nav class="level-nav" id="levelNav">
+      <!-- filled by JS -->
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="badge-row" id="badgeRow"></div>
+      <button class="btn-reset" onclick="confirmReset()">↺ Reset</button>
+    </div>
+  </aside>
+
+  <!-- MAIN PANEL -->
+  <main class="main-panel" id="mainPanel">
+    <!-- filled by JS -->
+  </main>
+
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="toast hidden"></div>
+
+<!-- LEVEL COMPLETE MODAL -->
+<div id="modal" class="modal-overlay hidden">
+  <div class="modal-box" id="modalBox"></div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
